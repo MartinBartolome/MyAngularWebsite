@@ -3,10 +3,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { LocationIcon, EmailIcon, PhoneIcon, LinkedInIcon, GitHubIcon } from '../../shared/icons/custom-icons';
 
 @Component({
   selector: 'app-contact',
-  imports: [MatCardModule, MatButtonModule, MatIconModule, MatListModule],
+  imports: [MatCardModule, MatButtonModule, MatIconModule, MatListModule, LocationIcon, EmailIcon, PhoneIcon, LinkedInIcon, GitHubIcon],
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
 })

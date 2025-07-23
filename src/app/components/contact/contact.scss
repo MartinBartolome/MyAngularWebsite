@@ -43,10 +43,15 @@ mat-list {
       background: #e8f4f8;
     }
     
-    .mat-mdc-list-item-content {
+    .contact-item-content {
       display: flex;
       align-items: center;
       gap: 16px;
+      width: 100%;
+    }
+    
+    .contact-info {
+      flex: 1;
     }
     
     mat-icon {
@@ -54,6 +59,20 @@ mat-list {
       font-size: 1.4em;
       width: 1.4em;
       height: 1.4em;
+    }
+    
+    // Custom icon styling
+    app-location-icon,
+    app-email-icon,
+    app-phone-icon {
+      color: var(--primary-blue);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      flex-shrink: 0;
     }
   }
 
@@ -130,6 +149,12 @@ mat-list {
     &:hover {
       background: #005885 !important;
     }
+    
+    app-linkedin-icon {
+      margin-right: 8px;
+      display: inline-flex;
+      align-items: center;
+    }
   }
   
   // GitHub button styling
@@ -139,6 +164,12 @@ mat-list {
     
     &:hover {
       background: var(--text-dark) !important;
+    }
+    
+    app-github-icon {
+      margin-right: 8px;
+      display: inline-flex;
+      align-items: center;
     }
   }
 }
