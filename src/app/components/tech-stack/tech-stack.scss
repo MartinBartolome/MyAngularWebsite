@@ -1,0 +1,51 @@
+.tech-stack-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tech-card {
+  margin-bottom: 20px;
+}
+
+.tech-section {
+  margin-bottom: 30px;
+
+  h3 {
+    color: #1976d2;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+}
+
+.chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.experienced-chip {
+  background-color: #4caf50;
+  color: white;
+}
+
+.knowledge-chip {
+  background-color: #2196f3;
+  color: white;
+}
+
+.learning-chip {
+  background-color: #ff9800;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .tech-stack-container {
+    padding: 10px;
+  }
+  
+  .chip-container {
+    gap: 8px;
+  }
+}

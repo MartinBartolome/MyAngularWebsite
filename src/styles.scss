@@ -29,5 +29,40 @@ html {
   font: var(--mat-sys-body-medium);
 }/* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+  height: 100%; 
+}
+
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background-color: #fafafa;
+}
+
+// Main application container
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// Add some spacing after the header
+router-outlet + * {
+  padding-top: 20px;
+  flex: 1;
+}
+
+// Make sure text is readable
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+// Custom link styles
+a {
+  color: #1976d2;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}

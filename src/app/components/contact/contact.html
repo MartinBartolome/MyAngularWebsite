@@ -1,1 +1,47 @@
-<p>contact works!</p>
+<p><div class="contact-container">
+  <mat-card class="contact-card">
+    <mat-card-header>
+      <mat-card-title>Get in Touch</mat-card-title>
+      <mat-card-subtitle>Let's connect and discuss opportunities</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <mat-icon matListItemIcon>location_on</mat-icon>
+          <div matListItemTitle>Location</div>
+          <div matListItemLine>{{ contactInfo.location }}</div>
+        </mat-list-item>
+        
+        <mat-list-item>
+          <mat-icon matListItemIcon>email</mat-icon>
+          <div matListItemTitle>Email</div>
+          <div matListItemLine>
+            <a [href]="'mailto:' + contactInfo.email">{{ contactInfo.email }}</a>
+          </div>
+        </mat-list-item>
+        
+        <mat-list-item>
+          <mat-icon matListItemIcon>phone</mat-icon>
+          <div matListItemTitle>Phone</div>
+          <div matListItemLine>
+            <a [href]="'tel:' + contactInfo.phone">{{ contactInfo.phone }}</a>
+          </div>
+        </mat-list-item>
+      </mat-list>
+
+      <div class="social-links">
+        <h3>Connect with me</h3>
+        <div class="social-buttons">
+          <a mat-raised-button color="primary" [href]="contactInfo.linkedin" target="_blank" rel="noopener">
+            <mat-icon>work</mat-icon>
+            LinkedIn
+          </a>
+          <a mat-raised-button color="accent" [href]="contactInfo.github" target="_blank" rel="noopener">
+            <mat-icon>code</mat-icon>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
