@@ -29,20 +29,16 @@ html {
   font: var(--mat-sys-body-medium);
 }/* You can add global styles to this file, and also import other style files */
 
-// Developer-focused color palette
+// Professional color palette
 :root {
-  --dev-primary: #2563eb;        // Blue - primary brand
-  --dev-secondary: #10b981;      // Green - success/experience  
-  --dev-accent: #8b5cf6;         // Purple - expertise
-  --dev-warning: #f59e0b;        // Orange - learning
-  --dev-error: #ef4444;          // Red - alerts
-  --dev-dark: #1e293b;           // Dark blue-gray
-  --dev-darker: #0f172a;         // Darker background
-  --dev-code-bg: #1e1e2e;        // Code background
-  --dev-gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --dev-gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --dev-gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --dev-gradient-hero: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  --primary-blue: #1976d2;       // Material Blue - primary brand
+  --secondary-gray: #546e7a;     // Blue Gray - secondary
+  --accent-green: #2e7d32;       // Green - experience/success
+  --learning-orange: #f57c00;    // Orange - learning (subtle)
+  --text-dark: #212121;          // Dark gray for text
+  --text-light: #757575;         // Light gray for secondary text
+  --background-light: #fafafa;   // Light background
+  --card-white: #ffffff;         // Pure white for cards
 }
 
 html, body { 
@@ -51,9 +47,10 @@ html, body {
 
 body { 
   margin: 0; 
-  font-family: 'Roboto Mono', 'Roboto', "Helvetica Neue", sans-serif; 
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  font-family: 'Roboto', "Helvetica Neue", sans-serif; 
+  background: var(--background-light);
   min-height: 100vh;
+  color: var(--text-dark);
 }
 
 // Main application container
@@ -69,43 +66,22 @@ router-outlet + * {
   flex: 1;
 }
 
-// Enhanced typography for developers
+// Professional typography
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  background: var(--dev-gradient-1);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 16px;
 }
 
-// Developer-themed link styles
+// Professional link styles
 a {
-  color: var(--dev-primary);
+  color: var(--primary-blue);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.2s ease;
   
   &:hover {
-    color: var(--dev-accent);
-    text-decoration: underline;
-    text-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
+    color: var(--accent-green);
   }
 }
 
-// Code-like styling for emphasis
-.code-text {
-  font-family: 'Roboto Mono', monospace;
-  background: var(--dev-code-bg);
-  color: #a6e3a1;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 0.9em;
-}
 
-// Section dividers with gradients
-.section-divider {
-  height: 4px;
-  background: var(--dev-gradient-1);
-  margin: 30px 0;
-  border-radius: 2px;
-}

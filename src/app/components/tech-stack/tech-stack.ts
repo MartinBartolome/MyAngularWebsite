@@ -10,12 +10,12 @@ import { MatChipsModule } from '@angular/material/chips';
 })
 export class TechStack {
   experiencedTechnologies = [
-    'C#', 'Java', 'Spring Boot', 'Angular', 'Docker', 
-    'DevOps', 'SQL', 'GitHub', 'Jenkins'
+    'C#', '.NET Framework', 'Java', 'SpringBoot', 'Angular', 'JBoss', 
+    'SolidWorks API', 'SQL', 'DevOps', 'Docker', 'GitHub', 'Jenkins'
   ];
 
   additionalKnowledge = [
-    'Software Architecture', 'SOA', 'RESTful APIs'
+    'Software Architecture', 'SOA', 'RESTful APIs', 'Enterprise Applications', 'CI/CD'
   ];
 
   currentlyLearning = [

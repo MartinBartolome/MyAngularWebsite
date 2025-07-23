@@ -6,136 +6,53 @@
 
 .about-card {
   margin-bottom: 20px;
-  background: white;
+  background: var(--card-white);
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  position: relative;
-  overflow: hidden;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--dev-gradient-1);
-  }
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
 }
 
 mat-card-title {
-  font-family: 'Roboto Mono', monospace !important;
   font-size: 1.8em !important;
-  background: var(--dev-gradient-1) !important;
-  background-clip: text !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  
-  &::before {
-    content: 'const developer = ';
-    font-size: 0.6em;
-    color: var(--dev-dark);
-    font-family: 'Roboto Mono', monospace;
-  }
+  color: var(--text-dark) !important;
+  font-weight: 500 !important;
 }
 
 mat-card-subtitle {
-  color: var(--dev-secondary) !important;
-  font-weight: 600 !important;
+  color: var(--text-light) !important;
+  font-weight: 400 !important;
   font-size: 1.1em !important;
-  
-  &::before {
-    content: '💻 ';
-    margin-right: 8px;
-  }
+  margin-top: 8px !important;
 }
 
 .info-section {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   position: relative;
-  padding: 20px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 20px 0;
 
   h3 {
-    font-size: 1.3em;
-    margin-bottom: 15px;
-    font-weight: 600;
-    position: relative;
-    
-    &::before {
-      content: '';
-      position: absolute;
-      left: -20px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 4px;
-      height: 100%;
-      background: var(--dev-gradient-1);
-      border-radius: 2px;
-    }
+    font-size: 1.2em;
+    margin-bottom: 16px;
+    font-weight: 500;
+    color: var(--primary-blue);
   }
 
   p {
     line-height: 1.6;
-    margin-bottom: 15px;
-    color: var(--dev-dark);
+    margin-bottom: 16px;
+    color: var(--text-dark);
   }
 
   ul {
     li {
       margin-bottom: 8px;
       line-height: 1.5;
-      color: var(--dev-dark);
+      color: var(--text-dark);
       
       strong {
-        color: var(--dev-primary);
-        font-weight: 600;
+        color: var(--primary-blue);
+        font-weight: 500;
       }
-    }
-  }
-}
-
-// Different colors for each section
-.info-section:nth-child(1) {
-  border-left: 4px solid var(--dev-primary);
-  
-  h3 {
-    color: var(--dev-primary);
-    
-    &::after {
-      content: ' { }';
-      color: var(--dev-accent);
-      font-family: 'Roboto Mono', monospace;
-    }
-  }
-}
-
-.info-section:nth-child(2) {
-  border-left: 4px solid var(--dev-secondary);
-  
-  h3 {
-    color: var(--dev-secondary);
-    
-    &::after {
-      content: ' [ ]';
-      color: var(--dev-warning);
-      font-family: 'Roboto Mono', monospace;
-    }
-  }
-}
-
-.info-section:nth-child(3) {
-  border-left: 4px solid var(--dev-accent);
-  
-  h3 {
-    color: var(--dev-accent);
-    
-    &::after {
-      content: ' < />';
-      color: var(--dev-secondary);
-      font-family: 'Roboto Mono', monospace;
     }
   }
 }
@@ -144,21 +61,21 @@ mat-card-subtitle {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
-  padding: 12px;
-  background: white;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: var(--background-light);
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--primary-blue);
   
   strong {
-    color: var(--dev-primary);
-    font-weight: 600;
+    color: var(--text-dark);
+    font-weight: 500;
   }
   
   .education-school {
-    color: var(--dev-accent);
+    color: var(--text-light);
     font-style: italic;
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 
@@ -166,40 +83,34 @@ mat-card-subtitle {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 12px;
   
   mat-chip {
-    background: var(--dev-gradient-3) !important;
+    background: var(--secondary-gray) !important;
     color: white !important;
-    font-weight: 500;
-    border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
+    font-weight: 400;
+    border-radius: 16px;
+    transition: all 0.2s ease;
     
     &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(84, 110, 122, 0.2);
     }
   }
 }
 
 @media (max-width: 768px) {
   .about-container {
-    padding: 10px;
+    padding: 16px;
   }
   
   .education-item {
     flex-direction: column;
     align-items: flex-start;
-    gap: 5px;
+    gap: 8px;
   }
   
   .info-section {
-    padding: 15px;
-    margin-left: 0;
-    
-    h3::before {
-      display: none;
-    }
+    padding: 16px 0;
   }
 }
