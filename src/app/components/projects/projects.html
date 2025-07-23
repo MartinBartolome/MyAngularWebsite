@@ -1,0 +1,27 @@
+<p><div class="projects-container">
+  <h2>My Projects</h2>
+  <p class="intro-text">Here are some of my key projects that showcase my technical skills and development approach:</p>
+  
+  <div class="projects-grid">
+    @for (project of projects; track project.name) {
+      <mat-card class="project-card">
+        <mat-card-header>
+          <mat-card-title>{{ project.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="technologies">
+            <span class="tech-label">Technologies:</span>
+            <span class="tech-list">{{ project.technologies.join(', ') }}</span>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-raised-button color="primary" [href]="project.url" target="_blank" rel="noopener">
+            <mat-icon>code</mat-icon>
+            View on GitHub
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    }
+  </div>
+</div>

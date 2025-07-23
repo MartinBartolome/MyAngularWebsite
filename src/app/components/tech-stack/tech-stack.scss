@@ -1,0 +1,115 @@
+.tech-stack-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tech-card {
+  margin-bottom: 20px;
+  background: var(--card-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+  
+  mat-card-header {
+    background: var(--background-light);
+    padding: 24px !important;
+    
+    mat-card-title {
+      font-size: 1.8em !important;
+      color: var(--text-dark) !important;
+      font-weight: 500 !important;
+    }
+    
+    mat-card-subtitle {
+      color: var(--text-light) !important;
+      font-size: 1em !important;
+      margin-top: 8px !important;
+    }
+  }
+}
+
+.tech-section {
+  margin-bottom: 24px;
+  padding: 20px;
+
+  h3 {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: var(--text-dark);
+  }
+}
+
+.chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.experienced-chip {
+  background: var(--accent-green) !important;
+  color: white !important;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+  }
+}
+
+.knowledge-chip {
+  background: var(--primary-blue) !important;
+  color: white !important;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.2);
+  }
+}
+
+.learning-chip {
+  background: var(--learning-orange) !important;
+  color: white !important;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(245, 124, 0, 0.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-stack-container {
+    padding: 16px;
+  }
+  
+  .tech-section {
+    padding: 16px;
+  }
+  
+  .chip-container {
+    gap: 8px;
+  }
+  
+  .experienced-chip,
+  .knowledge-chip,
+  .learning-chip {
+    padding: 6px 12px;
+    font-size: 0.85em;
+  }
+}

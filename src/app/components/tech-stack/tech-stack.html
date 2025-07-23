@@ -1,0 +1,36 @@
+<p><div class="tech-stack-container">
+  <mat-card class="tech-card">
+    <mat-card-header>
+      <mat-card-title>Technology Stack</mat-card-title>
+      <mat-card-subtitle>My technical expertise and current learning areas</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="tech-section">
+        <h3>Experienced Technologies</h3>
+        <div class="chip-container">
+          @for (tech of experiencedTechnologies; track tech) {
+            <mat-chip class="experienced-chip">{{ tech }}</mat-chip>
+          }
+        </div>
+      </div>
+
+      <div class="tech-section">
+        <h3>Additional Knowledge</h3>
+        <div class="chip-container">
+          @for (tech of additionalKnowledge; track tech) {
+            <mat-chip class="knowledge-chip">{{ tech }}</mat-chip>
+          }
+        </div>
+      </div>
+
+      <div class="tech-section">
+        <h3>Currently Learning</h3>
+        <div class="chip-container">
+          @for (tech of currentlyLearning; track tech) {
+            <mat-chip class="learning-chip">{{ tech }}</mat-chip>
+          }
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

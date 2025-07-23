@@ -1,0 +1,169 @@
+.contact-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  margin-bottom: 24px;
+  background: var(--card-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+  
+  mat-card-header {
+    background: var(--background-light);
+    padding: 24px !important;
+    
+    mat-card-title {
+      font-size: 1.8em !important;
+      color: var(--text-dark) !important;
+      font-weight: 500 !important;
+    }
+    
+    mat-card-subtitle {
+      color: var(--text-light) !important;
+      font-size: 1em !important;
+      margin-top: 8px !important;
+    }
+  }
+}
+
+mat-list {
+  padding: 20px !important;
+  
+  .mat-mdc-list-item {
+    margin-bottom: 16px;
+    padding: 16px;
+    background: var(--background-light);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background: #e8f4f8;
+    }
+    
+    .mat-mdc-list-item-content {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    
+    mat-icon {
+      color: var(--primary-blue);
+      font-size: 1.4em;
+      width: 1.4em;
+      height: 1.4em;
+    }
+  }
+
+  a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: var(--accent-green);
+    }
+  }
+  
+  .contact-label {
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+  }
+  
+  .contact-value {
+    color: var(--text-light);
+    font-size: 0.95em;
+  }
+}
+
+.social-links {
+  margin-top: 24px;
+  text-align: center;
+  padding: 24px;
+  background: var(--background-light);
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  
+  h3 {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: var(--text-dark);
+  }
+}
+
+.social-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  a {
+    text-decoration: none;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+  
+  button {
+    padding: 10px 20px !important;
+    border-radius: 20px !important;
+    font-weight: 400 !important;
+    transition: all 0.2s ease !important;
+    
+    mat-icon {
+      margin-right: 8px;
+    }
+  }
+  
+  // LinkedIn button styling
+  button:first-child {
+    background: #0077b5 !important;
+    color: white !important;
+    
+    &:hover {
+      background: #005885 !important;
+    }
+  }
+  
+  // GitHub button styling
+  button:last-child {
+    background: var(--secondary-gray) !important;
+    color: white !important;
+    
+    &:hover {
+      background: var(--text-dark) !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 16px;
+  }
+  
+  .social-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    
+    button {
+      width: 180px;
+    }
+  }
+  
+  mat-list {
+    padding: 16px !important;
+    
+    .mat-mdc-list-item {
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+  }
+}

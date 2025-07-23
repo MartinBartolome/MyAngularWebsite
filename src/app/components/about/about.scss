@@ -1,0 +1,116 @@
+.about-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-card {
+  margin-bottom: 20px;
+  background: var(--card-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+}
+
+mat-card-title {
+  font-size: 1.8em !important;
+  color: var(--text-dark) !important;
+  font-weight: 500 !important;
+}
+
+mat-card-subtitle {
+  color: var(--text-light) !important;
+  font-weight: 400 !important;
+  font-size: 1.1em !important;
+  margin-top: 8px !important;
+}
+
+.info-section {
+  margin-bottom: 24px;
+  position: relative;
+  padding: 20px 0;
+
+  h3 {
+    font-size: 1.2em;
+    margin-bottom: 16px;
+    font-weight: 500;
+    color: var(--primary-blue);
+  }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: var(--text-dark);
+  }
+
+  ul {
+    li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+      color: var(--text-dark);
+      
+      strong {
+        color: var(--primary-blue);
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.education-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: var(--background-light);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-blue);
+  
+  strong {
+    color: var(--text-dark);
+    font-weight: 500;
+  }
+  
+  .education-school {
+    color: var(--text-light);
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+
+.certification-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+  
+  mat-chip {
+    background: var(--secondary-gray) !important;
+    color: white !important;
+    font-weight: 400;
+    border-radius: 16px;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(84, 110, 122, 0.2);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 16px;
+  }
+  
+  .education-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .info-section {
+    padding: 16px 0;
+  }
+}
