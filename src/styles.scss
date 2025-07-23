@@ -9,8 +9,8 @@
 html {
   @include mat.theme((
     color: (
-      primary: mat.$azure-palette,
-      tertiary: mat.$blue-palette,
+      primary: mat.$blue-palette,
+      tertiary: mat.$cyan-palette,
     ),
     typography: Roboto,
     density: 0,
@@ -29,14 +29,31 @@ html {
   font: var(--mat-sys-body-medium);
 }/* You can add global styles to this file, and also import other style files */
 
+// Developer-focused color palette
+:root {
+  --dev-primary: #2563eb;        // Blue - primary brand
+  --dev-secondary: #10b981;      // Green - success/experience  
+  --dev-accent: #8b5cf6;         // Purple - expertise
+  --dev-warning: #f59e0b;        // Orange - learning
+  --dev-error: #ef4444;          // Red - alerts
+  --dev-dark: #1e293b;           // Dark blue-gray
+  --dev-darker: #0f172a;         // Darker background
+  --dev-code-bg: #1e1e2e;        // Code background
+  --dev-gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --dev-gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --dev-gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --dev-gradient-hero: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
 html, body { 
   height: 100%; 
 }
 
 body { 
   margin: 0; 
-  font-family: Roboto, "Helvetica Neue", sans-serif; 
-  background-color: #fafafa;
+  font-family: 'Roboto Mono', 'Roboto', "Helvetica Neue", sans-serif; 
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
 }
 
 // Main application container
@@ -52,17 +69,43 @@ router-outlet + * {
   flex: 1;
 }
 
-// Make sure text is readable
+// Enhanced typography for developers
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
+  font-weight: 600;
+  background: var(--dev-gradient-1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-// Custom link styles
+// Developer-themed link styles
 a {
-  color: #1976d2;
+  color: var(--dev-primary);
   text-decoration: none;
+  transition: all 0.3s ease;
   
   &:hover {
+    color: var(--dev-accent);
     text-decoration: underline;
+    text-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
   }
+}
+
+// Code-like styling for emphasis
+.code-text {
+  font-family: 'Roboto Mono', monospace;
+  background: var(--dev-code-bg);
+  color: #a6e3a1;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+// Section dividers with gradients
+.section-divider {
+  height: 4px;
+  background: var(--dev-gradient-1);
+  margin: 30px 0;
+  border-radius: 2px;
 }

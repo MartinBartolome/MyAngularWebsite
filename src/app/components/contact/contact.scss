@@ -6,42 +6,229 @@
 
 .contact-card {
   margin-bottom: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: var(--dev-gradient-2);
+  }
+  
+  mat-card-header {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 25px !important;
+    
+    mat-card-title {
+      font-family: 'Roboto Mono', monospace !important;
+      font-size: 2em !important;
+      background: var(--dev-gradient-2) !important;
+      background-clip: text !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      font-weight: 700 !important;
+      
+      &::before {
+        content: 'contact = {';
+        color: var(--dev-dark);
+        font-size: 0.6em;
+        display: block;
+        margin-bottom: 8px;
+      }
+    }
+    
+    mat-card-subtitle {
+      color: var(--dev-accent) !important;
+      font-size: 1.1em !important;
+      font-weight: 500 !important;
+      
+      &::after {
+        content: '}';
+        color: var(--dev-dark);
+        font-size: 1.5em;
+        display: block;
+        margin-top: 8px;
+        font-family: 'Roboto Mono', monospace;
+      }
+    }
+  }
 }
 
 mat-list {
+  padding: 20px !important;
+  
   .mat-mdc-list-item {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-radius: 12px;
+    border-left: 4px solid var(--dev-primary);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateX(5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    &:nth-child(1) {
+      border-left-color: var(--dev-secondary);
+    }
+    
+    &:nth-child(2) {
+      border-left-color: var(--dev-primary);
+    }
+    
+    &:nth-child(3) {
+      border-left-color: var(--dev-warning);
+    }
+    
+    .mat-mdc-list-item-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    mat-icon {
+      color: var(--dev-primary);
+      font-size: 1.5em;
+      width: 1.5em;
+      height: 1.5em;
+    }
   }
 
   a {
-    color: #1976d2;
+    color: var(--dev-primary);
     text-decoration: none;
+    font-weight: 600;
+    font-family: 'Roboto Mono', monospace;
+    transition: all 0.3s ease;
     
     &:hover {
+      color: var(--dev-accent);
       text-decoration: underline;
+      text-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
     }
+  }
+  
+  .contact-label {
+    font-weight: 700;
+    color: var(--dev-dark);
+    margin-bottom: 5px;
+    font-family: 'Roboto Mono', monospace;
+    
+    &::after {
+      content: ':';
+      color: var(--dev-accent);
+    }
+  }
+  
+  .contact-value {
+    color: var(--dev-primary);
+    font-weight: 500;
   }
 }
 
 .social-links {
   margin-top: 30px;
   text-align: center;
+  padding: 25px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--dev-gradient-3);
+    border-radius: 16px 16px 0 0;
+  }
   
   h3 {
-    color: #1976d2;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
     margin-bottom: 20px;
-    font-weight: 500;
+    font-weight: 700;
+    background: var(--dev-gradient-3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    &::before {
+      content: 'socials = [';
+      color: var(--dev-dark);
+      font-size: 0.7em;
+    }
+    
+    &::after {
+      content: ']';
+      color: var(--dev-dark);
+      font-size: 0.7em;
+    }
   }
 }
 
 .social-buttons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
   
   a {
     text-decoration: none;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+  
+  button {
+    padding: 12px 24px !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+    
+    &:hover {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    mat-icon {
+      margin-right: 8px;
+    }
+  }
+  
+  // LinkedIn button styling
+  button:first-child {
+    background: linear-gradient(135deg, #0077b5 0%, #005885 100%) !important;
+    color: white !important;
+    
+    &:hover {
+      box-shadow: 0 8px 25px rgba(0, 119, 181, 0.4) !important;
+    }
+  }
+  
+  // GitHub button styling
+  button:last-child {
+    background: linear-gradient(135deg, #333 0%, #1a1a1a 100%) !important;
+    color: white !important;
+    
+    &:hover {
+      box-shadow: 0 8px 25px rgba(51, 51, 51, 0.4) !important;
+    }
   }
 }
 
@@ -53,5 +240,19 @@ mat-list {
   .social-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
+    
+    button {
+      width: 200px;
+    }
+  }
+  
+  mat-list {
+    padding: 15px !important;
+    
+    .mat-mdc-list-item {
+      padding: 12px;
+      margin-bottom: 12px;
+    }
   }
 }

@@ -5,23 +5,55 @@
 
   h2 {
     text-align: center;
-    color: #1976d2;
+    font-size: 2.2em;
     margin-bottom: 15px;
-    font-weight: 500;
+    font-weight: 700;
+    background: var(--dev-gradient-1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Roboto Mono', monospace;
+    
+    &::before {
+      content: '< ';
+      color: var(--dev-secondary);
+    }
+    
+    &::after {
+      content: ' />';
+      color: var(--dev-secondary);
+    }
   }
 
   .intro-text {
     text-align: center;
     margin-bottom: 30px;
-    color: #666;
+    color: var(--dev-dark);
     line-height: 1.6;
+    font-size: 1.1em;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--dev-gradient-2);
+      border-radius: 12px 12px 0 0;
+    }
   }
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 20px;
+  gap: 30px;
   margin-top: 20px;
 }
 
@@ -29,33 +61,117 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: var(--dev-gradient-1);
+  }
+  
+  &:nth-child(even)::before {
+    background: var(--dev-gradient-2);
+  }
+
+  mat-card-header {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 20px !important;
+    
+    mat-card-title {
+      font-family: 'Roboto Mono', monospace !important;
+      font-size: 1.4em !important;
+      color: var(--dev-primary) !important;
+      font-weight: 700 !important;
+      
+      &::before {
+        content: 'project.';
+        font-size: 0.7em;
+        color: var(--dev-accent);
+        margin-right: 4px;
+      }
+    }
+  }
 
   mat-card-content {
     flex: 1;
-  }
-
-  .project-description {
-    line-height: 1.6;
-    margin-bottom: 15px;
-  }
-
-  .technologies {
-    margin-top: 15px;
+    padding: 20px !important;
     
-    .tech-label {
-      font-weight: 600;
-      color: #1976d2;
+    .project-description {
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: var(--dev-dark);
+      font-size: 1.05em;
     }
-    
-    .tech-list {
-      color: #666;
-      margin-left: 5px;
+
+    .technologies {
+      margin-top: 15px;
+      padding: 15px;
+      background: var(--dev-code-bg);
+      border-radius: 8px;
+      color: white;
+      
+      .tech-label {
+        font-weight: 600;
+        color: #64ffda;
+        font-family: 'Roboto Mono', monospace;
+        
+        &::before {
+          content: 'tech: [';
+          color: #cba6f7;
+        }
+      }
+      
+      .tech-list {
+        color: #a6e3a1;
+        margin-left: 0;
+        font-family: 'Roboto Mono', monospace;
+        
+        &::after {
+          content: ']';
+          color: #cba6f7;
+        }
+      }
     }
   }
 
   mat-card-actions {
-    padding: 16px;
+    padding: 20px !important;
     margin-top: auto;
+    background: rgba(245, 245, 245, 0.5);
+    
+    button {
+      background: var(--dev-gradient-3) !important;
+      color: white !important;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+      }
+      
+      mat-icon {
+        margin-right: 8px;
+      }
+    }
   }
 }
 
@@ -66,5 +182,20 @@
   
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .project-card {
+    mat-card-header {
+      padding: 15px !important;
+    }
+    
+    mat-card-content {
+      padding: 15px !important;
+    }
+    
+    mat-card-actions {
+      padding: 15px !important;
+    }
   }
 }

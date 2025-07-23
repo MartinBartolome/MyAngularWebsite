@@ -8,40 +8,40 @@
       <mat-list>
         <mat-list-item>
           <mat-icon matListItemIcon>location_on</mat-icon>
-          <div matListItemTitle>Location</div>
-          <div matListItemLine>{{ contactInfo.location }}</div>
+          <div matListItemTitle class="contact-label">Location</div>
+          <div matListItemLine class="contact-value">{{ contactInfo.location }}</div>
         </mat-list-item>
         
         <mat-list-item>
           <mat-icon matListItemIcon>email</mat-icon>
-          <div matListItemTitle>Email</div>
-          <div matListItemLine>
+          <div matListItemTitle class="contact-label">Email</div>
+          <div matListItemLine class="contact-value">
             <a [href]="'mailto:' + contactInfo.email">{{ contactInfo.email }}</a>
           </div>
         </mat-list-item>
         
         <mat-list-item>
           <mat-icon matListItemIcon>phone</mat-icon>
-          <div matListItemTitle>Phone</div>
-          <div matListItemLine>
+          <div matListItemTitle class="contact-label">Phone</div>
+          <div matListItemLine class="contact-value">
             <a [href]="'tel:' + contactInfo.phone">{{ contactInfo.phone }}</a>
           </div>
         </mat-list-item>
       </mat-list>
-
-      <div class="social-links">
-        <h3>Connect with me</h3>
-        <div class="social-buttons">
-          <a mat-raised-button color="primary" [href]="contactInfo.linkedin" target="_blank" rel="noopener">
-            <mat-icon>work</mat-icon>
-            LinkedIn
-          </a>
-          <a mat-raised-button color="accent" [href]="contactInfo.github" target="_blank" rel="noopener">
-            <mat-icon>code</mat-icon>
-            GitHub
-          </a>
-        </div>
-      </div>
     </mat-card-content>
   </mat-card>
+
+  <div class="social-links">
+    <h3>Connect with me</h3>
+    <div class="social-buttons">
+      <a mat-raised-button [href]="contactInfo.linkedin" target="_blank" rel="noopener">
+        <mat-icon>work</mat-icon>
+        LinkedIn
+      </a>
+      <a mat-raised-button [href]="contactInfo.github" target="_blank" rel="noopener">
+        <mat-icon>code</mat-icon>
+        GitHub
+      </a>
+    </div>
+  </div>
 </div>
