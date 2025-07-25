@@ -48,40 +48,12 @@
   margin-top: 12px;
 }
 
-.experienced-chip {
-  background: var(--secondary-gray) !important;
-  color: white !important;
-  font-weight: 500;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.9em;
-  transition: all 0.2s ease;
-  
-  &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(84, 110, 122, 0.2);
-  }
-}
-
-.knowledge-chip {
-  background: var(--secondary-gray) !important;
-  color: white !important;
-  font-weight: 400;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.9em;
-  transition: all 0.2s ease;
-  
-  &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(84, 110, 122, 0.2);
-  }
-}
-
+// Base chip styling
+.experienced-chip,
+.knowledge-chip,
 .learning-chip {
   background: var(--secondary-gray) !important;
   color: white !important;
-  font-weight: 400;
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 0.9em;
@@ -91,6 +63,16 @@
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(84, 110, 122, 0.2);
   }
+}
+
+// Specific chip styles
+.experienced-chip {
+  font-weight: 500;
+}
+
+.knowledge-chip,
+.learning-chip {
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
